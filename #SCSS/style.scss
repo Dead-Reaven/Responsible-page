@@ -14,10 +14,68 @@ body {
 }
 
 .container {
-  max-width: 1130px;
-  margin: 15px auto;
+  max-width: 1600px;
+  margin: 0px auto;
 }
 
 .content {
   flex: 1 1 auto;
+}
+
+@mixin phone {
+  @media (min-width:300px)  {
+    img{height: 40px;}
+    button {font-size: 9px;}    
+  }
+  @media (min-width:400px)  {
+    img{height: 45px;}
+    button {font-size: 9px;}    
+  }
+  @media (min-width: 500px)    {
+    img{height: 50px;}
+    button {font-size: 11px;}
+  }
+
+  @media (min-width: 600px)  {
+    img{height: 65px;}
+    button {font-size: 12px;}
+  }
+  @media (min-width: 700px)  {
+    padding-top: 15px;
+    img{height: 75px;}
+    button {font-size: 13px;}
+
+  }
+   .container{
+    max-width:600px;}
+   
+}
+
+
+.header{
+  @include phone;
+  min-width: 100%;
+  background: url("../img/white_bicycle_handlebar_img.png") top  no-repeat;
+  background-size: cover;
+  min-height: 350px;
+  max-height: 800px;
+  padding-top: 10px;
+
+
+  .nav {
+    min-height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    img{min-height: 100%;}
+    button {
+      background: none;
+      line-height: 1.2;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: #4d4959;
+    }
+  }
 }
